@@ -1,0 +1,27 @@
+{
+  "name": "n-fs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:Nbsaw/node-template.git",
+  "author": "nbsaw <nbsawz@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "notify": true,
+    "roots": [
+      "__tests__"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "commander": "^2.19.0",
+    "ncp": "^2.0.0",
+    "pify": "^4.0.1",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
