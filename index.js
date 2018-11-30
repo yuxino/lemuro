@@ -1,3 +1,3 @@
-const nfs = require("./lib");
+const lemuro = require("./lib");
 
-module.exports = nfs;
+module.exports = lemuro;

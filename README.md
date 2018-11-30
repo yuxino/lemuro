@@ -1,12 +1,15 @@
-# n-fs
+# lemuro
 
 My Simple fs utils
 
 ## API
 
-- **rmrf** - remove all files
-- **mkdir** - create a new Folder
-- **touch** - create an empty file
-- **ncp** - copy all files
-- **moveFiles** - move files and delete origin folder
-
+- ncp
+- execCmd
+- rmrf
+- mkdir
+- touch
+- writeFile
+- moveFiles
+- readFile
+- lstat
