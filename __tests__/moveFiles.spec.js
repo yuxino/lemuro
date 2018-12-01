@@ -1,4 +1,4 @@
-const { mkdir, touch, moveFiles, rmrf } = require("../lib");
+const { mkdir, touch, moveFiles, rmrf, isExists } = require("../lib");
 
 const FOLDER = "__tests__/__Move__";
 const TARGET_FOLDER = "__tests__/__TARGET__";
@@ -17,6 +17,11 @@ describe("moveFiles", () => {
   });
   it("move", async () => {
     await moveFiles(FOLDER, TARGET_FOLDER);
+    const res = await Promise.all(
+      fileList.map(file => isExists(`${TARGET_FOLDER}/${file}`))
+    );
+    const isMoveSuccess = res.every(v => v === true);
+    expect(isMoveSuccess).toBe(true);
     console.log("test folder move success");
   });
   afterAll(async () => {

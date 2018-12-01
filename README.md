@@ -13,3 +13,5 @@ My Simple fs utils
 - moveFiles
 - readFile
 - lstat
+- isDir
+- isExists

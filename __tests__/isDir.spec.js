@@ -3,7 +3,7 @@ const touch = require("../lib/touch");
 const isDir = require("../lib/isDir");
 const rmrf = require("../lib/rmrf");
 
-const TEST_FOLDER = "__tests__/isDir";
+const TEST_FOLDER = "__tests__/__isDir__";
 const TEST_FILE_PATH = `${TEST_FOLDER}/test.txt`;
 const NOT_EXISTS_PATH = "./qaq";
 
