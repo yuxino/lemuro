@@ -5,6 +5,7 @@ const rmrf = require("../lib/rmrf");
 
 const TEST_FOLDER = "__tests__/isDir";
 const TEST_FILE_PATH = `${TEST_FOLDER}/test.txt`;
+const NOT_EXISTS_PATH = "./qaq";
 
 describe("isDir", () => {
   beforeAll(async () => {
@@ -16,6 +17,9 @@ describe("isDir", () => {
   });
   it("should't be a dir", async () => {
     expect(await isDir(TEST_FILE_PATH)).toBe(false);
+  });
+  it("check not exists path", async () => {
+    expect(await isDir(NOT_EXISTS_PATH)).toBe(false);
   });
   afterAll(async () => {
     await rmrf(TEST_FOLDER);
