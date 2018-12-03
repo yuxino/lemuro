@@ -15,3 +15,4 @@ My Simple fs utils
 - lstat
 - isDir
 - isExists
+- mkdirR
