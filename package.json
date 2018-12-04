@@ -1,6 +1,6 @@
 {
   "name": "lemuro",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "index.js",
   "repository": "git@gitlab.com:Nbsaw/node-template.git",
   "author": "nbsaw <nbsawz@gmail.com>",
