@@ -1,33 +1,45 @@
 {
-  "name": "lemuro",
-  "version": "1.0.9",
-  "main": "index.js",
-  "types": "types/index.d.ts",
-  "repository": "git@gitlab.com:Nbsaw/node-template.git",
-  "author": "nbsaw <nbsawz@gmail.com>",
+  "version": "2.0.0",
   "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "lib",
-    "types/*.d.ts"
+    "dist"
   ],
-  "jest": {
-    "notify": true,
-    "roots": [
-      "__tests__"
-    ]
-  },
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "lemuro",
+  "author": "yuxino",
+  "module": "dist/lemuro.esm.js",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/ncp": "^2.0.3",
+    "@types/pify": "^3.0.2",
+    "husky": "^4.2.3",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "commander": "^2.19.0",
     "ncp": "^2.0.0",
-    "pify": "^4.0.1",
-    "rimraf": "^2.6.2"
-  },
-  "devDependencies": {
-    "jest": "^23.6.0",
-    "tsd": "^0.11.0"
+    "pify": "^5.0.0"
   }
 }
