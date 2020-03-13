@@ -9,9 +9,7 @@ describe('moveFiles', () => {
   beforeAll(async () => {
     await mkdir(FOLDER);
     console.log('test folder create success');
-    const tasks = fileList.map(file => {
-      touch(`${FOLDER}/${file}`);
-    });
+    const tasks = fileList.map(file => touch(`${FOLDER}/${file}`));
     await Promise.all(tasks);
     console.log('file list create success');
   });
