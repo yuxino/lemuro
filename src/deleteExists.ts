@@ -1,4 +1,5 @@
 import fs from 'fs';
+import isExists from './isExists';
 
 /**
  * deltet file or folder if it's exists
