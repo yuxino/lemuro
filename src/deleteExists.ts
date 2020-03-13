@@ -1,5 +1,5 @@
-import fs from 'fs';
 import isExists from './isExists';
+import { rmrf } from '.';
 
 /**
  * deltet file or folder if it's exists
@@ -8,9 +8,7 @@ import isExists from './isExists';
  */
 const deleteExists = async (path: string): Promise<void> => {
   if (await isExists(path)) {
-    fs.unlink(path, err => {
-      if (err) throw err;
-    });
+    await rmrf(path);
   }
 };
 
