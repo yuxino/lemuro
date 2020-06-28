@@ -12,6 +12,7 @@ import isDir from './isDir';
 import isExists from './isExists';
 import mkdirR from './mkdirR';
 import deleteExists from './deleteExists';
+import getFileType from './getFileType';
 
 export {
   ncp,
@@ -28,4 +29,5 @@ export {
   isExists,
   mkdirR,
   deleteExists,
+  getFileType,
 };

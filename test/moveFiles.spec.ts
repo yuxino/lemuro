@@ -8,10 +8,8 @@ const fileList = ['a.txt', 'b.txt', 'c.txt'];
 describe('moveFiles', () => {
   beforeAll(async () => {
     await mkdir(FOLDER);
-    console.log('test folder create success');
     const tasks = fileList.map(file => touch(`${FOLDER}/${file}`));
     await Promise.all(tasks);
-    console.log('file list create success');
   });
   it('move', async () => {
     await moveFiles(FOLDER, TARGET_FOLDER);
@@ -20,10 +18,8 @@ describe('moveFiles', () => {
     );
     const isMoveSuccess = res.every(v => v === true);
     expect(isMoveSuccess).toBe(true);
-    console.log('test folder move success');
   });
   afterAll(async () => {
     await rmrf(TARGET_FOLDER);
-    console.log('test folder deletes success');
   });
 });

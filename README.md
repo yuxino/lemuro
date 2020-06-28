@@ -16,3 +16,4 @@ My Simple fs utils
 - isDir
 - isExists
 - mkdirR
+- getFileType

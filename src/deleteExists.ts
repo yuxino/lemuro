@@ -1,5 +1,5 @@
 import isExists from './isExists';
-import { rmrf } from '.';
+import rmrf from './rmrf';
 
 /**
  * deltet file or folder if it's exists
