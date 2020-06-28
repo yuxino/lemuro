@@ -4,7 +4,7 @@ import mime from 'mime';
  * Asynchronous recursive file copying with Node.js
  * @param {string} path target to be get mimetype
  */
-export default async function getFileType(path: string) {
+export default function getFileType(path: string) {
   // check start with dot
   if (path.startsWith('.')) return { ext: 'unknow', mime: 'unknow' };
 
